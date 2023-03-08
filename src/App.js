@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+//import logo from './logo.svg';
+//import './App.css';
+import CreatePost from './component/postform'
+import GetData from './component/getdata'
+import New from './component/newform'
+import Table from './component/getdatafromAPI'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+<CreatePost/>
+<h1 style={{ textAlign: "center" }}>Posts Table</h1>
+<br></br>
+<Table/>
+   {/* <New/> */}
     </div>
   );
 }
