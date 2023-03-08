@@ -10,17 +10,17 @@ import React, { useState } from 'react';
 const Getdata = () => {
 
 
-    const initialValues = {
-        name: '',
-        email: '',
-        address: '',
-        contact: '',
-      }
+  const initialValues = {
+    name: '',
+    email: '',
+    address: '',
+    contact: '',
+  }
 
-    const [formData, setFormData] = useState(initialValues);
+  const [formData, setFormData] = useState(initialValues);
   const handleSubmit = (values) => {
 
-    
+
     alert(JSON.stringify(values));
   };
 
@@ -32,13 +32,13 @@ const Getdata = () => {
 
     const { name, value } = event.target;
 
-    const data = {...initialValues};
+    const data = { ...initialValues };
 
     data.name = event?.nativeEvent.target.value;
     setFormData(data);
   };
 
-  console.log(formData,'new');
+  console.log(formData, 'new');
   return (
     <div>
       <Formik
@@ -49,7 +49,6 @@ const Getdata = () => {
           contact: '',
         }}
         onSubmit={handleSubmit}
-        // onChange={handleFormChange}
       >
         {({ handleSubmit }) => (
           <Form onChange={handleFormChange}>
